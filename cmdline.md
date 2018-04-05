@@ -40,15 +40,17 @@
 
 **`take gen --add <filename> <parameters...>`**  
 **`take gen --del <filename>`**  
+**`take gen --add-param <filename> <parameters...>`**  
+**`take gen --del-param <filename> <parameters...>`**  
 **`take gen --build [<filenames...>] [ -j <process-count> ]`**  
 **`take gen --clean`**
 
 * Ключ `--add` создает генератор с именем файла `<filename>` и параметрами `<parameters...>` Параметры указываются по типу `<name>:<type>` (`<type>` может быть `int`, `float`, `char`, `string`).
 * Ключ `--del` удаляет генератор.
+* Ключ `--add-param` добавляет к генератору параметры `<parameters...>`, разделенные пробелом. Параметры также указываются по типу `<name>:<type>`.
+* Ключ `--del-param` удаляет параметры генератора (`<parameters...>`&mdash; список имен удаляемых параметров).
 * Ключ `--build` компилирует генераторы (если `<filename...>` не задан, компилирует все генераторы).
 * Ключ `--clean` чистит папку с генераторами от лишнего.
-
-**TODO**: придумать, как можно менять параметры генератора
 
 
 **`take checker --new`**  
