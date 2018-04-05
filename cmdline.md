@@ -29,7 +29,7 @@
   * `output-file` (type: `string`, default: `"stdout"`)
   * `strict` (type: `int`, default: `1`) -- поведение похоже на Are tests well-formed? на Polygon
 
-Как задавать значени согласно типам, смотрите `configs.md`.
+О значениях и типах смотрите подробнее `configs.md`.
 
 **`take const --list`**  
 **`take const --set <name> <type> <value>`**  
