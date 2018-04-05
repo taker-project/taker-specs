@@ -46,10 +46,15 @@ _=248.8513
 inf942: float =   inf
 HELLO/world:float[]={1, 2.3, -42.5}
 HEllO={-inf, nan, 11, 0.0}
+iMeanNothing: float = null
+
+# Этот комментарий занимает целую строку
 
 [Chars/And/Strings]
 c1:char='\n'
 s1='hello\n\'\"\\\''
 q1:  string = ""
 arr1 = {'a', 'hello', "array of string", "# this is not comment"}
+arr2 = {"null", null, "non-null"}
+arr3: char[] = null
 ~~~~~
