@@ -25,16 +25,16 @@
 
   * `time-limit` (default: `2000`)
   * `memory-limit` (default: `131072`)
-  * `input-file` (default: `stdin`)
-  * `output-file` (default: `stdout`)
-  * `strict` (default: `true`) -- поведение похоже на Are tests well-formed? на Polygon
+  * `input-file` (default: `"stdin"`)
+  * `output-file` (default: `"stdout"`)
+  * `strict` (default: `1`) -- поведение похоже на Are tests well-formed? на Polygon
 
 
 **`take const --list`**  
 **`take const --set <name> <type> <value>`**  
 **`take const --unset <name>`**
 
-Работает аналогично `take option`, но служит для установки ограничений/прочих универсальных констант. `<type>` может быть `int`, `float`, `char`, `string`, `int[]`, `float[]`, `char[]`, `string[]`. Как задавать значения, смотрите **TODO**.  
+Работает аналогично `take option`, но служит для установки ограничений/прочих универсальных констант. `<type>` может быть `int`, `float`, `char`, `string`, `int[]`, `float[]`, `char[]`, `string[]`. Как задавать значения, смотрите configs.md.  
 Ключ `--unset` удаляет константу.
 
 
