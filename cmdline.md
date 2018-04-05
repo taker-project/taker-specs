@@ -156,7 +156,7 @@
 
 **`take export [ --tester | --polygon ]`**
 
-Экспорт пакета с задачей. `--tester`&mdash; для Тестера, `--polygon`&mdash в пакет, похожий на пакет Polygon.
+Экспорт пакета с задачей. `--tester`&mdash; для Тестера, `--polygon`&mdash; в пакет, похожий на пакет Polygon.
 
 
 **`take clean`**
