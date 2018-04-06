@@ -21,15 +21,9 @@
 **`take option --set <name> <value>`**
 
 * Ключ `--list` показывает все опции
-* Ключ `--set` устанавливает опцию `<name>` в `<value>`. Поддерживается:  
+* Ключ `--set` устанавливает опцию `<name>` в `<value>`.
 
-  * `time-limit` (type: `int`, default: `2000`)
-  * `memory-limit` (type: `int`, default: `131072`)
-  * `input-file` (type: `string`, default: `"stdin"`)
-  * `output-file` (type: `string`, default: `"stdout"`)
-  * `strict` (type: `int`, default: `1`) -- поведение похоже на Are tests well-formed? на Polygon
-
-О значениях и типах смотрите подробнее `configs.md`.
+Поддерживаемые опции смотреть в `main-config.md`.
 
 **`take const --list`**  
 **`take const --set <name> <type> <value>`**  
