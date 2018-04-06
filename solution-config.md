@@ -10,17 +10,17 @@
 
 ~~~~~
 [main]
-extension = ".cpp"
-language = "cpp.g++11"
-tags = {"MAIN"}
+extension: string = ".cpp"
+language: string = "cpp.g++11"
+tags: string[] = {"MAIN"}
 
 [bad-soln]
-extension = ".cpp"
-language = "cpp.g++"
-tags = {"OK", "TL"}
+extension: string = ".cpp"
+language: string = "cpp.g++"
+tags: string[] = {"OK", "TL"}
 
 [inkorrekt]
-extension = ".py"
-language = "py.2"
-tags = {"OK", "WA", "PE"}
+extension: string = ".py"
+language: string = "py.2"
+tags: string[] = {"OK", "WA", "PE"}
 ~~~~~

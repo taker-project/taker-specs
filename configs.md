@@ -4,8 +4,8 @@
 
 ~~~~~
 [Section1]
-<name1>[:<type1>]=<value1>
-<name2>[:<type2>]=<value2>
+<name1>:<type1>=<value1>
+<name2>:<type2>=<value2>
 ...
 
 [Section2]
@@ -18,7 +18,7 @@
 
 Названия секций и полей регистро-зависимы, но отличаться только регистром названия не должны. В разных секциях могут быть поля с одинаковыми названиями.
 
-Поддерживаются следующие типы: `int`, `float`, `char`, `string`, `int[]`, `float[]`,  `char[]`, `string[]`. Если тип не указан явно, он выводится, причем между `int` и `float` (если есть неоднозначность) выбирается `int`, и между `char` и `string` выбирается `char`. Аналогично с `int[]` и `float[]` и т. д.
+Поддерживаются следующие типы: `int`, `float`, `char`, `string`, `int[]`, `float[]`,  `char[]`, `string[]`.
 
 * `int`&mdash; целое число, например: `0`, `42`, `-38`, `42742`. Считается, что число 64-х битное знаковое.
 * `float`&mash; вещественное число, например: `5.2`, `2e5`, `5`, `-24885`, `inf`. Для хранения таких чисел должен использоваться `long double`.
@@ -32,29 +32,29 @@
 
 ~~~~~
 [Integers]
-a=4
+a:int=4
 long.integer-42 : int = 28518515 # длинное число
 _: int = -0
-hack = 555
-arr1={1,2,3,4,5}
+hack: int = 555
+arr1: int[] ={1,2,3,4,5}
 arr2 : int[]   =  { 42,   492759,   248,  48   } # komment
 
 [Floats]
 q:float=33
-88=88
-_=248.8513
+88: float=88
+_: float =248.8513
 inf942: float =   inf
 HELLO/world:float[]={1, 2.3, -42.5}
-HEllO={-inf, nan, 11, 0.0}
+HEllO: float[]={-inf, nan, 11, 0.0}
 iMeanNothing: float = null
 
 # Этот комментарий занимает целую строку
 
 [Chars/And/Strings]
 c1:char='\n'
-s1='hello\n\'\"\\\''
+s1:string='hello\n\'\"\\\''
 q1:  string = ""
-arr1 = {'a', 'hello', "array of string", "# this is not comment"}
-arr2 = {"null", null, "non-null"}
+arr1  : string[] = {'a', 'hello', "array of string", "# this is not comment"}
+arr2: string[] = {"null", null, "non-null"}
 arr3: char[] = null
 ~~~~~

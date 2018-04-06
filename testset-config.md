@@ -10,11 +10,11 @@
 
 ~~~~~
 [tests]
-enabled = 1
+enabled: int = 1
 
 [disabled]
-enabled = 0
+enabled: int = 0
 
 [enabled]
-enabled = 1
+enabled: int = 1
 ~~~~~

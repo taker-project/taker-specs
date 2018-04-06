@@ -22,17 +22,17 @@
 
 ~~~~~
 [stress/body]
-generators = {"gen1", "gen2"}
-solutions = {"author", badSolution"}
-stress-time = 120000
-time-limit = 250
+generators: string[] = {"gen1", "gen2"}
+solutions: string[] = {"author", badSolution"}
+stress-time: int = 120000
+time-limit: int = 250
 
 [gen1]
-n = [1; 10]
-m = [100]
-chance = 42
+n: int = [1; 10]
+m: int = [100]
+chance: int = 42
 
 [gen2]
-str = r"[0-9]{1,3}"
-maxQ = 20
+str: string = r"[0-9]{1,3}"
+maxQ: int = 20
 ~~~~~
