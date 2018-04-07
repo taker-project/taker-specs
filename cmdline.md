@@ -29,7 +29,7 @@
 **`take const --set <name>:<type>=<value>`**  
 **`take const --unset <name>`**
 
-Работает аналогично `take option`, но служит для установки ограничений/прочих универсальных констант. `<type>` может быть `int`, `float`, `char`, `string`, `int[]`, `float[]`, `char[]`, `string[]`. Как задавать значения, смотрите `configs.md`.  
+Работает аналогично `take option`, но служит для установки ограничений/прочих универсальных констант. `<type>` может быть `int`, `float`, `char`, `string`, `int[]`, `float[]`, `char[]`, `string[]`. Как задавать значения, смотрите [configs.md](configs.md).  
 Ключ `--unset` удаляет константу.
 
 
