@@ -1,4 +1,4 @@
-# Описание команд утилиты take:
+# Параметры командной строки утилиты take
 
 
 **`take run [ -t <time-limit> ] [ -m <memory-limit> ] [ -i <input-file> ] [ -o <output-file> ] <file> <parameters...>`**
