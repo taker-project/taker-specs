@@ -17,5 +17,4 @@ maxM: int = 100000
 
 [problem]
 has-validator: int = 1 # 1, если есть валидатор, 0 иначе
-statements: string[] = {"en", "ru"} # языки, на которых есть условия
 ~~~~~
