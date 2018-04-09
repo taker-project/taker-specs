@@ -3,8 +3,7 @@
 
 **`take run [ -t <time-limit> ] [ -m <memory-limit> ] [ -i <input-file> ] [ -o <output-file> ] <file> <parameters...>`**
 
-Запуск `<file>` с параметрами `<parameters...>`. `<time-limit>` указывается в миллисекундах, `<memory-limit>`&mdash; в килобайтах.
-
+Запуск `<file>` с параметрами `<parameters...>`. `<time-limit>` указывается в миллисекундах, `<memory-limit>`&mdash; в килобайтах. Умеет запускать исполняемые файлы, `class`-файлы java, `py`-файлы python и так далее.
 
 **`take compile <file> [ -t <time-limit> ] [ -m <memory-limit> ] [ -I <include-paths> ] [ -l <language> ]`**
 
