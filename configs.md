@@ -33,7 +33,7 @@
 ~~~~~
 [Integers]
 a:int=4
-long.integer-42 : int = 28518515 # длинное число
+var.var-42 : int = 28518515 # длинное число
 _: int = -0
 hack: int = 555
 arr1: int[] ={1,2,3,4,5}
