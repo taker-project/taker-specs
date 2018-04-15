@@ -26,7 +26,7 @@
 **`take const --set <name>:<type>=<value>`**  
 **`take const --unset <name>`**
 
-Работает аналогично `take option`, но служит для установки ограничений/прочих универсальных констант. `<type>` может быть `int`, `float`, `char`, `string`, `int[]`, `float[]`, `char[]`, `string[]`. Как задавать значения, смотрите [configs.md](configs.md).  
+Работает аналогично `take option`, но служит для установки ограничений/прочих универсальных констант. `<type>` может быть `bool`, `int`, `float`, `char`, `string`, `bool[]`, `int[]`, `float[]`, `char[]`, `string[]`. Как задавать значения, смотрите [configs.md](configs.md).  
 Ключ `--unset` удаляет константу.
 
 **`take gen --add <filename> <parameters...>`**  
@@ -36,7 +36,7 @@
 **`take gen --build [<filenames...>] [ -j <process-count> ]`**  
 **`take gen --clean`**
 
-* Ключ `--add` создает генератор с именем файла `<filename>` и параметрами `<parameters...>` Параметры указываются по типу `<name>:<type>[=<value>]` (`<type>` может быть `int`, `float`, `char`, `string`, `int[]`, `float[]`, `char[]`, `string[]`). Если задано `[=<value>]`, то оно становится значением по умолчанию для этого параметра.
+* Ключ `--add` создает генератор с именем файла `<filename>` и параметрами `<parameters...>` Параметры указываются по типу `<name>:<type>[=<value>]` (`<type>` может быть `bool`, `int`, `float`, `char`, `string`, `bool[]`, `int[]`, `float[]`, `char[]`, `string[]`). Если задано `[=<value>]`, то оно становится значением по умолчанию для этого параметра.
 * Ключ `--del` удаляет генератор.
 * Ключ `--add-param` добавляет к генератору параметры `<parameters...>`, разделенные пробелом. Параметры также указываются по типу `<name>:<type>[=<value>]`.
 * Ключ `--del-param` удаляет параметры генератора (`<parameters...>`&mdash; список имен удаляемых параметров).
