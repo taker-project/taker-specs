@@ -108,13 +108,80 @@ while (j != 1) {
 
 Предпочитайте префиксный инкремент (`++i` вместо `i++`).
 
-Заголовочные файлы должны иметь расширение `.hpp`, а исходники C++&mdash; расширение `.cpp`. Заголовочные файлы следует называть в camelCase, например: `headerFile.hpp`.
-
 Для перечислений стоит использовать `enum class` вместо `enum`.
 
 Не стоит использовать преобразования типов в стиле Си, используйте `static_cast<T>`.
 
 Возможно, список будет пополняться.
+
+### Заголовочные файлы
+
+Заголовочные файлы должны иметь расширение `.hpp`, а исходники C++&mdash; расширение `.cpp`. Заголовочные файлы следует называть в camelCase, например: `headerFile.hpp`.
+
+В заголовочном файле должны содержаться следующие строки (пусть файл называется `example/myHeader.hpp`):
+
+~~~~~
+#ifndef EXAMPLE_MY_HEADER_HPP
+#define EXAMPLE_MY_HEADER_HPP
+
+// Здесь код
+
+#endif
+~~~~~
+
+В начале каждого файла должен содержаться заголовок лицензии. Выглядит он следующим образом:
+
+~~~~~
+/*
+  This file is part of Taker
+  Copyright (C) <год> Taker Project Developers
+  
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+  
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+  
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+~~~~~
+
+Ниже должен идти комментарий, который поясняет назначение файла.
+
+### Константы
+
+Использование литералов в коде нежелательно. Исключения такие: разрешены числовые литералы `0`, `1`, `-1`. Все остальные литералы необходимо оформить в виде констант. Например, код
+
+~~~~~
+for (int i = 0; i < 12; i++) {
+	if (values[i] > 4096) {
+		return 42;
+	}
+}
+~~~~~
+
+можно переписать так:
+
+~~~~~
+const int valuesCount = 12;
+const int maxValue = 4096;
+const int statusBadValue = 42;
+
+for (int i = 0; i < valuesCount; i++) {
+	if (values[i] > maxValue) {
+		return statusBadValue;
+	}
+}
+~~~~~
+
+Конечно, в реальном коде лучше всего дать наиболее осмысленные имена константам. `statusBadValue` здесь только для примера, гораздо лучше использование `enum class` для подобных целей.
+
+Строковые константы лучше "складывать" в один заголовочный файл, чтобы потом можно было просто переводить систему на другой язык.
 
 ## Работа с git
 
