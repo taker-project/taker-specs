@@ -12,15 +12,15 @@
 [main]
 extension: string = ".cpp"
 language: string = "cpp.g++11"
-tags: string[] = {"MAIN"}
+tags: string[] = ["MAIN"]
 
 [bad-soln]
 extension: string = ".cpp"
 language: string = "cpp.g++"
-tags: string[] = {"OK", "TL"}
+tags: string[] = ["OK", "TL"]
 
 [inkorrekt]
 extension: string = ".py"
 language: string = "py.2"
-tags: string[] = {"OK", "WA", "PE"}
+tags: string[] = ["OK", "WA", "PE"]
 ~~~~~

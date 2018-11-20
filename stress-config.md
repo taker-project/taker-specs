@@ -22,8 +22,8 @@
 
 ~~~~~
 [stress/body]
-generators: string[] = {"gen1", "gen2"}
-solutions: string[] = {"author", badSolution"}
+generators: string[] = ["gen1", "gen2"]
+solutions: string[] = ["author", badSolution"]
 stress-time: int = 120000
 time-limit: int = 250
 
