@@ -18,14 +18,13 @@
 
 Названия секций и полей регистро-зависимы, но отличаться только регистром названия не должны. В разных секциях могут быть поля с одинаковыми названиями.
 
-Поддерживаются следующие типы: `bool`, `int`, `float`, `char`, `string`, `bool[]`, `int[]`, `float[]`,  `char[]`, `string[]`.
+Поддерживаются следующие типы: `bool`, `int`, `float`, `string`, `bool[]`, `int[]`, `float[]`,  `string[]`.
 
 * `bool`&mdash; логическая переменная, может принисать значения `true` или `false`. Значения регистрозависимы, то есть `True` недопустимо.
 * `int`&mdash; целое число, например: `0`, `42`, `-38`, `42742`. Считается, что число 64-х битное знаковое.
 * `float`&mdash; вещественное число, например: `5.2`, `2e5`, `5`, `-24885`, `inf`. Для хранения таких чисел должен использоваться `long double`.
-* `char`&mdash; одиночный символ, заключенный в `''` или `""`, поддерживается экранирование как в C. Например: `"c"`, `'\n'`, `"\033"`, `'\''`.
 * `string`&mdash; последовательность символов, заключенная в `''` или `""`, также поддерживается экранирование как в C. Например, `"hello"`, `'Multiline\ntext'`, `"abracadabra"`, `"\"Quotes\""`.
-* `bool[]`, `int[]`, `float[]`, `char[]`, `string[]`&mdash массивы, перечисляющие значения через запятую и заключенные в `{}`. Например, `{1, 2, 3, 4}`, `{1.5, inf, 2.44, -453}`, `{'c', 'h', 'a', 'r', 's', '\n'}`, `{"I", 'have', "an", '\'array\'', "of", 'strings'}`, `{true, false, false, true}`.
+* `bool[]`, `int[]`, `float[]`, `char[]`, `string[]`&mdash; массивы, перечисляющие значения через запятую и заключенные в `[]`. Например, `[1, 2, 3, 4]`, `[1.5, inf, 2.44, -453]`, `['c', 'h', 'a', 'r', 's', '\n']`, `["I", 'have', "an", '\'array\'', "of", 'strings']`, `[true, false, false, true]`.
 
 Поле любого типа может иметь значение `null`, обозначающее "переменная есть, но ей не назначено значение".
 
@@ -35,32 +34,32 @@
 [Flags]
 white: bool = true
 black:    bool  =  false
-arr:bool={true,false,false,true}
+arr:bool=[true,false,false,true]
 
 [Integers]
 a:int=4
 var.var-42 : int = 28518515 # длинное число
 _: int = -0
 hack: int = 555
-arr1: int[] ={1,2,3,4,5}
-arr2 : int[]   =  { 42,   492759,   248,  48   } # komment
+arr1: int[] =[1,2,3,4,5]
+arr2 : int[]   =  [ 42,   492759,   248,  48   ] # komment
 
 [Floats]
 q:float=33
 88: float=88
 _: float =248.8513
 inf942: float =   inf
-HELLO/world:float[]={1, 2.3, -42.5}
-HEllO: float[]={-inf, nan, 11, 0.0}
+HELLO/world:float[]=[1, 2.3, -42.5]
+HEllO: float[]=[-inf, nan, 11, 0.0]
 iMeanNothing: float = null
 
 # Этот комментарий занимает целую строку
 
 [Chars/And/Strings]
-c1:char='\n'
+c1:string='\n'
 s1:string='hello\n\'\"\\\''
 q1:  string = ""
-arr1  : string[] = {'a', 'hello', "array of string", "# this is not comment"}
-arr2: string[] = {"null", null, "non-null"}
-arr3: char[] = null
+arr1  : string[] = ['a', 'hello', "array of string", "# this is not comment"]
+arr2: string[] = ["null", null, "non-null"]
+arr3: string[] = null
 ~~~~~
